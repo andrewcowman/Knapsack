@@ -1,0 +1,6 @@
+c:\users\andrew\documents\visual studio 2015\Projects\AnnealingKnapsack\AnnealingKnapsack\bin\Debug\AnnealingKnapsack.exe.config
+C:\Users\Andrew\Documents\Visual Studio 2015\Projects\AnnealingKnapsack\AnnealingKnapsack\bin\Debug\AnnealingKnapsack.exe
+C:\Users\Andrew\Documents\Visual Studio 2015\Projects\AnnealingKnapsack\AnnealingKnapsack\bin\Debug\AnnealingKnapsack.pdb
+C:\Users\Andrew\Documents\Visual Studio 2015\Projects\AnnealingKnapsack\AnnealingKnapsack\obj\Debug\AnnealingKnapsack.csprojResolveAssemblyReference.cache
+C:\Users\Andrew\Documents\Visual Studio 2015\Projects\AnnealingKnapsack\AnnealingKnapsack\obj\Debug\AnnealingKnapsack.exe
+C:\Users\Andrew\Documents\Visual Studio 2015\Projects\AnnealingKnapsack\AnnealingKnapsack\obj\Debug\AnnealingKnapsack.pdb
