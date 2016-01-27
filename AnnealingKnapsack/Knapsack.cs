@@ -4,9 +4,9 @@ using System.Linq;
 namespace AnnealingKnapsack {
     public class Knapsack {
 
-        public const int MaxWeightKnapsack = 50; // maximum total weight of the knapsack
-        public const int MaxWeightItem = 20; // maximum weight of individual items
-        public const int MaxValueItem = 100; // maximum value of individual items
+        public int maxWeightKnapsack; // maximum total weight of the knapsack
+        public int maxWeightItem; // maximum weight of individual items
+        public int maxValueItem; // maximum value of individual items
         public const int NumItemsToChoose = 50; // number of items to choose from
 
         private Random _rand = new Random(); // random object
@@ -39,6 +39,13 @@ namespace AnnealingKnapsack {
         public Knapsack() :
             this(100, 40000, 0.001) {
 
+            Console.Write("Max weight of knapsack: ");
+            maxWeightKnapsack = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Max weight of item: ");
+            maxWeightItem = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Max value of item: ");
+            maxValueItem = Convert.ToInt32(Console.ReadLine());
+
             // initialize
             _currentTaken = new bool[NumItemsToChoose];
             _backupTaken = new bool[NumItemsToChoose];
@@ -51,8 +58,8 @@ namespace AnnealingKnapsack {
 
             // create random values and weights
             for(int i = 0; i < NumItemsToChoose; i++) {
-                _weights[i] = _rand.Next(0, MaxWeightItem);
-                _values[i] = _rand.Next(0, MaxValueItem);
+                _weights[i] = _rand.Next(0, maxWeightItem);
+                _values[i] = _rand.Next(0, maxValueItem);
             }
 
             WeighLess(); // remove item if over weight limit
@@ -161,7 +168,7 @@ namespace AnnealingKnapsack {
         private double Evaluate() {
 
             // if taken weight > weight of knapsack
-            if(GetTotalWeight() > MaxWeightKnapsack) {
+            if(GetTotalWeight() > maxWeightKnapsack) {
                 return 0; // return score of 0
             }
 
@@ -217,7 +224,7 @@ namespace AnnealingKnapsack {
         private void WeighLess() {
 
             // while weight of taken items > max knapsack weight
-            while (GetTotalWeight() > MaxWeightKnapsack) {
+            while (GetTotalWeight() > maxWeightKnapsack) {
                 int idx = _rand.Next(0, _currentTaken.Length); // pick random index
                 _currentTaken[idx] = false; // drop random index
             }
